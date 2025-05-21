@@ -10,7 +10,9 @@ export default function Home() {
     if (isLoading) return;
     try {
       setIsLoading(true);
-      const response = await fetch("http://localhost:4000/api/test");
+      const response = await fetch(
+        "https://string-geo-backend-tbgf.onrender.com/api/test"
+      );
       const res = await response.json();
       if (!response.ok) {
         throw Error(res.message || "Something went wrong");
