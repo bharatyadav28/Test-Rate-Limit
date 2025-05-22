@@ -11,8 +11,8 @@ export default function Home() {
     if (isLoading) return;
     try {
       setIsLoading(true);
-      // const url = "https://string-geo-backend-tbgf.onrender.com";
-      const url = "http://localhost:4000";
+      const url = "https://string-geo-backend-tbgf.onrender.com";
+      // const url = "http://localhost:4000";
       const response = await fetch(`${url}/api/test`, {
         method: "POST",
         body: JSON.stringify({ customIp: customIp?.trim() }),
